@@ -8,26 +8,37 @@
     <title>{{ $title ?? 'Wiki Moonkeys' }}</title>
 
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=inter:400,500,600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=inter:400,500,600&display=swap" rel="stylesheet"/>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
 </head>
-<body class="min-h-screen bg-white text-zinc-800 antialiased dark:bg-zinc-900 dark:text-zinc-200">
 
-<header class="border-b border-zinc-200 bg-white/80 px-6 py-4 backdrop-blur dark:border-zinc-800 dark:bg-zinc-900/80 sticky top-0 z-50">
+<body class="min-h-screen bg-[#0B1220] text-[#E2E8F0] antialiased ">
+
+<header class="border-b border-[#1E293B] bg-[#0B1220]/80 px-6 py-4 backdrop-blur-md sticky top-0 z-50">
     <div class="mx-auto flex max-w-7xl items-center justify-between">
-        <div class="flex items-center gap-2 font-bold text-xl tracking-tight">
-            <span class="text-purple-600">🌕</span> Wiki MoonKeys
-        </div>
+        <div class="flex items-center gap-3 font-bold text-xl tracking-tight text-[#F8FAFC]">
 
+            <!-- Ícone lunar -->
+            <a href="/" class="flex items-center gap-3 font-bold text-xl tracking-tight">
+
+                <span class="text-[#FACC15] drop-shadow-[0_0_6px_rgba(250,204,21,0.4)] transition hover:scale-110">
+                    🌕
+                </span>
+
+                <span class="bg-gradient-to-r from-[#E2E8F0] to-[#60A5FA] bg-clip-text text-transparent">
+                    Wiki MoonKeys
+                </span>
+
+            </a>
+
+        </div>
     </div>
 </header>
 
-<main class="mx-auto max-w-7xl px-6 py-8">
+<main class="mx-auto max-w-7xl px-4 md:px-6 py-8">
     {{ $slot }}
 </main>
-
 
 </body>
 </html>
