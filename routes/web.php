@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\WikiViewer;
+use App\Livewire\LandingPage;
 use Livewire\Volt\Volt;
 
 //Route::get('/', function () {
@@ -20,6 +21,8 @@ Volt::route('categorias', 'categorias')
 
 // Rota pública (fora do middleware auth)
 Route::get('/', WikiViewer::class)->name('home');
+
+Route::view('/inicio', 'landing-page')->name('inicio');
 
 
 
